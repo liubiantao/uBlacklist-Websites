@@ -1,6 +1,6 @@
 name: auto generate new websites
 
-on: [pull_request]
+on: [push]
 
 jobs:
   generate:
@@ -23,11 +23,12 @@ jobs:
       run: node handleWebsites.js
       
     - name: Auto Commit changed files
-      uses: stefanzweifel/git-auto-commit-action@v1.0.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        COMMIT_MESSAGE: "chore: auto generate new websites"
-        COMMIT_AUTHOR_EMAIL: "liubiantao@gmail.com"
-        COMMIT_AUTHOR_NAME: "liubiantao"
+      run: |
+        git remote set-url origin https://liubiantao:${{ secrets.TOKEN }}@github.com/liubiantao/uBlacklist-Websites
+        git config --global user.email "liubiantao@gmail.com"
+        git config --global user.name "Workflow"
+        git add .
+        git commit -m "chore: auto generate new websites" || echo "No changes found. Nothing to commit."
+        git push
 
         
