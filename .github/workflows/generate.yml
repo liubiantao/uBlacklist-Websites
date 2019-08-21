@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [10.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -27,5 +27,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
         COMMIT_MESSAGE: "chore: auto generate new websites"
+        COMMIT_AUTHOR_EMAIL: "liubiantao@gmail.com"
+        COMMIT_AUTHOR_NAME: "liubiantao"
 
         
