@@ -29,6 +29,6 @@ jobs:
         git config --global user.name "Workflow"
         git add .
         git commit -m "chore: auto generate new websites" || echo "No changes found. Nothing to commit."
-        git push
+        git push -u origin HEAD
 
         
