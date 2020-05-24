@@ -65,3 +65,4 @@
 *://*.koubeiblog.com/*
 *://*.vimsky.com/*
 *://*.coder.work/*
+*://*.stacknoob.com/*
