@@ -65,3 +65,5 @@
 *://*.koubeiblog.com/*
 *://*.vimsky.com/*
 *://*.coder.work/*
+*://*.stacknoob.com/*
+*://*.it-swarm.dev/*
